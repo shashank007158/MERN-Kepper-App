@@ -24,7 +24,7 @@ function App() {
 
   function deleteNote(id) {
     axios
-      .delete("http://mern-notes-keeper.herokuapp.com/d" + id);
+      .delete("http://mern-notes-keeper.herokuapp.com/" + id);
   }
 
   return (
@@ -34,9 +34,6 @@ function App() {
       <Row>
       <Col>
       <CreateArea onAdd={addNote} />
-      </Col>
-      </Row>
-      </Container>
       {notes.map((noteItem, index) => {
         return (
           <Note
@@ -48,6 +45,9 @@ function App() {
           />
         );
       })}
+      </Col>
+      </Row>
+      </Container>
       <Footer />
     </div>
     
