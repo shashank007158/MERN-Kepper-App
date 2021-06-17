@@ -5,18 +5,20 @@
 }
 html {
   font-family: "Montserrat", sans-serif;
+  width: 100vw;
 }
 body {
   background: #eee;
   background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
-  padding: 0 16px;
 }
 
 header {
   background-color: #f5ba13;
-  margin: auto -16px;
-  padding: 16px 32px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  padding: 1.25% 3%;
+  box-shadow: 0 0 10px 0 rgba(185, 171, 171, 0.3);
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 header h1 {
@@ -100,4 +102,13 @@ form.create-note button {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
+}
+@media only screen and (max-width:760px) {
+  form.create-note
+  {
+    width:320px;
+  }
+  .note{
+    width:180px;
+  }
 }
