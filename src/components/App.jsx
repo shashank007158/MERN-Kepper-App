@@ -8,7 +8,7 @@ import axios from "axios";
 
 function App() {
   const [notes, setNotes] = useState([]);
-  axios.get("http://mern-notes-keeper.herokuapp.com").then(res=>setNotes(res.data));
+  axios.get("http://mern-notes-keeper.herokuapp.com/").then(res=>setNotes(res.data));
   
   function addNote(newNote) {
     const notes = {
@@ -16,7 +16,7 @@ function App() {
       content: newNote.content,
     };
     axios.post("http://mern-notes-keeper.herokuapp.com/add", notes).then(
-      axios.get("http://mern-notes-keeper.herokuapp.com").then((res) => {
+      axios.get("http://mern-notes-keeper.herokuapp.com/").then((res) => {
         res.data.length > 0 && setNotes(res.data);
       })
     );
