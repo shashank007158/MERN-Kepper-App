@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import Note from "./Note";
 import CreateArea from "./CreateNote";
 import axios from "axios";
-import {Container,Row,Col} from "react-bootstrap";
+// import {Container,Row,Col} from "react-bootstrap";
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -24,7 +24,7 @@ function App() {
 
   function deleteNote(id) {
     axios
-      .delete("http://mern-notes-keeper.herokuapp.com/d" + id);
+      .delete("http://mern-notes-keeper.herokuapp.com/" + id);
   }
 
   return (
